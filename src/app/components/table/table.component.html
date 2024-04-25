@@ -1,0 +1,105 @@
+<section>
+  <div class="label-box">
+    <label class="col-form-label"
+      >Mostrar
+      <select
+        name="numero"
+        class="form-select-md"
+        (change)="emitiSize()"
+        [(ngModel)]="size"
+      >
+        <option value="5">5</option>
+        <option value="10">10</option>
+        <option value="20">20</option>
+      </select>
+      entradas
+    </label>
+  </div>
+  <div class="input-group mb-3 search-box">
+    <input
+      class="form-control-lg me-2"
+      type="search"
+      placeholder="Search"
+      aria-label="Search"
+      [(ngModel)]="modelSearch"
+      (keyup)="emitSearch()"
+    />
+  </div>
+</section>
+<div class="table-responsive">
+  <table class="table table-dark table-striped table-hover align-middle">
+    <thead>
+      <th class="text-center">Modelo</th>
+      <th class="text-center">
+        Preço
+        <input
+          type="button"
+          (click)="clicaremit()"
+          class="btn order-btn"
+          value="▼"
+          style="font-size: 0.8em"
+        />
+      </th>
+      <th class="text-center">Ano</th>
+      <th class="text-center">Portas</th>
+      <th class="text-center">Criado</th>
+      <th class="text-center">Atualizado</th>
+    </thead>
+    <tbody>
+      <tr *ngFor="let v of dados">
+        <td class="text-center">{{ v.modelo }}</td>
+        <td class="text-center">{{ v.preco }}</td>
+        <td class="text-center">{{ v.ano }}</td>
+        <td class="text-center">{{ v.portas }}</td>
+        <td class="text-center">
+          {{ v.criadoEm | date : "dd/MM/yyyy  hh:mm" }}
+        </td>
+        <td class="text-center">
+          {{ v.atualizadoEm | date : "dd/MM/yyyy  hh:mm" }}
+        </td>
+        <td>
+          <button
+            type="button"
+            class="btn btn-lg btn-edit"
+            data-bs-toggle="modal"
+            data-bs-target="#exampleModal2"
+            (click)="emitirEventoEditar(v.id)"
+          >
+            <i class="bi bi-pencil-square"></i> Editar
+          </button>
+        </td>
+        <td>
+          <button
+            type="button"
+            class="btn btn-lg teste2 btn-delete"
+            data-bs-toggle="modal"
+            data-bs-target="#exampleModal3"
+            (click)="emitirEventoEditar(v.id)"
+          >
+            <i class="bi bi-trash-fill"></i> Excluir
+          </button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+<div class="container-pagination">
+  <ul class="pagination">
+    <li class="page-item" (click)="emtiRetorno()">
+      <a class="page-link" aria-label="Previous">
+        <span aria-hidden="true">&laquo;</span>
+      </a>
+    </li>
+    <li class="page-item custom-page-item">
+      <p class="page-link btn-lg" *ngIf="etapa === 0">1</p>
+      <p class="page-link btn-lg" *ngIf="etapa !== 0">{{ etapa + 1 }}</p>
+    </li>
+
+    <li class="page-item" (click)="emitirTeste()">
+      <a class="page-link" aria-label="Next">
+        <span aria-hidden="true">&raquo;</span>
+      </a>
+    </li>
+  </ul>
+</div>

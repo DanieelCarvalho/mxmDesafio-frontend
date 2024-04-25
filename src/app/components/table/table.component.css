@@ -1,0 +1,73 @@
+section {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  height: 7rem;
+}
+
+.search-box {
+  width: 25.5rem;
+  height: 4rem;
+}
+.search-box input {
+  height: 100%;
+  width: 100%;
+}
+.container-pagination {
+  display: flex;
+  justify-content: flex-end;
+}
+.label-box {
+  height: 5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.custom-page-item a {
+  height: 100%;
+  font-size: 1.6rem;
+  cursor: pointer;
+}
+.custom-page-item p {
+  height: 100%;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+label {
+  color: #fff;
+  font-weight: 100;
+}
+select {
+  background-color: black;
+  color: #fff;
+  font-weight: 100;
+  text-align: center;
+}
+th {
+  font-weight: 300;
+  color: #fff;
+  font-family: "Roboto Mono", monospace;
+  font-size: 1.6rem;
+}
+td {
+  font-family: "Roboto Mono", monospace;
+  font-weight: 100;
+  font-size: 1.6rem;
+}
+a {
+  cursor: pointer;
+}
+.order-btn {
+  background-color: black;
+}
+.btn-edit {
+  background-color: #2f4f4f;
+  border: none;
+}
+
+.btn-delete {
+  background-color: #6b3030;
+  border: none;
+}

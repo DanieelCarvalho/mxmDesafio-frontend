@@ -1,0 +1,293 @@
+<app-header></app-header>
+
+<main>
+  <header class="resale-header">
+    <h1>Anúncios</h1>
+    <div class="resale-header-buttons">
+      <button type="button" class="btn btn-lg btn-export" (click)="export()">
+        <i class="bi bi-file-earmark-plus"> </i> Exportar
+      </button>
+      <button
+        type="button"
+        class="btn btn-lg btn-adc"
+        data-bs-toggle="modal"
+        data-bs-target="#exampleModal"
+      >
+        <i class="bi bi-file-earmark-plus"></i> Cadastrar novo carro
+      </button>
+    </div>
+
+    <!-- Modal adicionar -->
+    <div
+      class="modal fade"
+      id="exampleModal"
+      tabindex="-1"
+      aria-labelledby="exampleModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog modal-lg">
+        <div class="modal-content bg-dark">
+          <div class="modal-header">
+            <h1 class="modal-title fs-5 title-modal">Cadastrar Carro</h1>
+          </div>
+          <div class="modal-body">
+            <form [formGroup]="form" (submit)="create()">
+              <div id="inicio" class="input-group mb-3 inputs">
+                <label
+                  >Modelo:
+
+                  <input
+                    type="text"
+                    class="form-control"
+                    placeholder="Qual o modelo do carro?"
+                    formControlName="modelo"
+                    name="modelo"
+                    required
+                  />
+                </label>
+                <label>
+                  Preço:
+                  <input
+                    type="text"
+                    class="form-control"
+                    placeholder="Qual o preço do carro?"
+                    formControlName="preco"
+                    name="preco"
+                    required
+                  />
+                </label>
+                <label>
+                  Ano:
+                  <input
+                    type="text"
+                    class="form-control"
+                    placeholder="Qual o ano do carro?"
+                    formControlName="ano"
+                    name="ano"
+                    required
+                  />
+                </label>
+                <label>
+                  Portas
+                  <input
+                    type="text"
+                    class="form-control"
+                    placeholder="Quantas portas tem o carro?"
+                    formControlName="portas"
+                    name="portas"
+                    required
+                  />
+                </label>
+              </div>
+              <div class="buttons">
+                <button
+                  type="submit"
+                  class="btn btn-lg btn-adc-car"
+                  data-bs-dismiss="modal"
+                >
+                  Adicionar
+                </button>
+                <button
+                  type="button"
+                  class="btn btn-primary btn-lg btn-voltar"
+                  data-bs-dismiss="modal"
+                >
+                  Fechar
+                </button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- FormEdit  -->
+
+    <div
+      class="modal fade"
+      id="exampleModal2"
+      tabindex="-1"
+      aria-labelledby="exampleModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog modal-lg">
+        <div class="modal-content bg-dark">
+          <div class="modal-header">
+            <h1 class="modal-title fs-5 title-modal">Editar</h1>
+          </div>
+          <div class="modal-body">
+            <form [formGroup]="formEdit" (submit)="updateCar()">
+              <div id="inicio" class="input-group mb-3 inputs">
+                <label
+                  >Modelo:
+
+                  <input
+                    type="text"
+                    class="form-control"
+                    placeholder="Qual o modelo do carro?"
+                    formControlName="modelo"
+                    name="modelo"
+                    required
+                  />
+                </label>
+                <label>
+                  Preço:
+                  <input
+                    type="text"
+                    class="form-control"
+                    placeholder="Qual o preço do carro?"
+                    formControlName="preco"
+                    name="preco"
+                    required
+                  />
+                </label>
+                <label>
+                  Ano:
+                  <input
+                    type="text"
+                    class="form-control"
+                    placeholder="Qual o ano do carro?"
+                    formControlName="ano"
+                    name="ano"
+                    required
+                  />
+                </label>
+                <label>
+                  Portas
+                  <input
+                    type="text"
+                    class="form-control"
+                    placeholder="Quantas portas tem o carro?"
+                    formControlName="portas"
+                    name="portas"
+                    required
+                  />
+                </label>
+              </div>
+              <div class="buttons">
+                <button
+                  type="submit"
+                  class="btn btn-lg btn-edit"
+                  data-bs-dismiss="modal"
+                >
+                  Editar
+                </button>
+                <button
+                  type="button"
+                  class="btn btn-primary btn-lg btn-voltar"
+                  data-bs-dismiss="modal"
+                >
+                  Fechar
+                </button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- formDelete -->
+    <div
+      class="modal fade"
+      id="exampleModal3"
+      tabindex="-1"
+      aria-labelledby="exampleModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog modal-lg">
+        <div class="modal-content bg-dark">
+          <div class="modal-header">
+            <h1 class="modal-title fs-5 title-modal">Excluir Carro</h1>
+            <button
+              type="button"
+              class="btn-close btn-close-white"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+
+          <div class="modal-header">
+            <p class="modal-title fs-5 title-modal">
+              Tem certeza que quer excluir o registro abaixo?
+            </p>
+          </div>
+          <div class="modal-body">
+            <form [formGroup]="formEdit" (submit)="deleteCar()">
+              <div id="inicio" class="input-group mb-3 inputs">
+                <label
+                  >Modelo:
+
+                  <input
+                    type="text"
+                    class="form-control"
+                    placeholder="Qual o modelo do carro?"
+                    formControlName="modelo"
+                    name="modelo"
+                    readonly
+                  />
+                </label>
+                <label>
+                  Preço:
+                  <input
+                    type="text"
+                    class="form-control"
+                    placeholder="Qual o preço do carro?"
+                    formControlName="preco"
+                    name="preco"
+                    readonly
+                  />
+                </label>
+                <label>
+                  Ano:
+                  <input
+                    type="text"
+                    class="form-control"
+                    placeholder="Qual o ano do carro?"
+                    formControlName="ano"
+                    name="ano"
+                    readonly
+                  />
+                </label>
+                <label>
+                  Portas
+                  <input
+                    type="text"
+                    class="form-control"
+                    placeholder="Quantas portas tem o carro?"
+                    formControlName="portas"
+                    name="portas"
+                    readonly
+                  />
+                </label>
+              </div>
+              <div class="buttons">
+                <button
+                  type="submit"
+                  class="btn btn-danger btn-lg btn-delete"
+                  data-bs-dismiss="modal"
+                >
+                  excluir
+                </button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+  <section class="container-table">
+    <app-table
+      [dados]="dados"
+      [etapa]="etapa"
+      [size]="size"
+      [sort]="sort"
+      [modelSearch]="modelSearch"
+      (editarClicked)="executarAoEditar($event)"
+      (nextpage)="proximaetapa()"
+      (returnPage)="etapaAnterior()"
+      (pageSize)="pageSize($event)"
+      (searchModelChange)="searchModel($event)"
+      (teste)="sortByPrice()"
+    ></app-table>
+  </section>
+</main>

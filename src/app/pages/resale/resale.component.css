@@ -1,0 +1,122 @@
+main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+
+  background-color: #000000;
+}
+label {
+  color: #f5f5f5;
+  font-weight: 400;
+}
+
+.container-table {
+  width: 80%;
+}
+.resale-header {
+  width: 80%;
+  height: 10rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.resale-header-buttons {
+  width: 40rem;
+  display: flex;
+  justify-content: space-between;
+}
+header {
+  display: flex;
+  justify-content: space-evenly;
+}
+header h1 {
+  font-size: 3.7rem;
+  color: #8a8a8a;
+}
+.modal-adc {
+  background-color: #2c3034;
+}
+.title-modal {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  text-transform: uppercase;
+  font-family: "Roboto Mono", monospace;
+  font-weight: 400;
+  color: #f5f5f5;
+}
+.buttons {
+  display: flex;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  text-transform: uppercase;
+}
+
+.inputs {
+  display: flex;
+  flex-direction: column;
+}
+.inputs label {
+  font-weight: bold;
+  color: #8a8a8a;
+}
+
+.form-control {
+  font-size: 1.6rem;
+}
+.form-control::placeholder {
+  font-size: 1.6rem;
+}
+.title-modal {
+  font-size: 1.8rem !important;
+  font-weight: bold;
+}
+.title-modal h1 {
+}
+.btn-export {
+  background-color: #2f4f4f;
+  border: none;
+  font-weight: 400;
+  color: #e0e0e0;
+  text-transform: uppercase;
+}
+.btn-export:hover {
+  color: #f5f5f5;
+}
+
+.btn-adc {
+  background-color: #2f4f4f;
+  color: #e0e0e0;
+  text-transform: uppercase;
+}
+.btn-adc-car {
+  background-color: #2f4f4f;
+  color: #e0e0e0;
+  text-transform: uppercase;
+}
+.btn-adc:hover {
+  color: #f5f5f5;
+}
+.btn-delete {
+  background-color: #6b3030;
+  border: none;
+  color: #e0e0e0;
+
+  text-transform: uppercase;
+}
+.btn-edit {
+  background-color: #2f4f4f;
+  color: #e0e0e0;
+  text-transform: uppercase;
+}
+.btn-voltar {
+  background-color: #6b3030;
+  border: none;
+
+  text-transform: uppercase;
+}
+.btn-close-white {
+  color: #fff;
+}
