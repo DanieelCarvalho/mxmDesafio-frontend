@@ -1,13 +1,48 @@
-<header>
-  <nav>
-    <h1 class="h1">Revendas Car</h1>
+<nav class="navbar navbar-expand-lg navbar-dark container-header">
+  <div class="container-fluid">
+    <h1 class="navbar-brand" class="h1">Revendas Car</h1>
     <ul>
       <li>
-        <a routerLink="/home"><i class="bi bi-house"></i> Home</a>
+        <a class="navbar-brand" routerLink="/home"
+          ><i class="bi bi-house"></i> Home</a
+        >
       </li>
       <li>
-        <a routerLink="/revendas"><i class="bi bi-car-front"></i> Revendas</a>
+        <a class="navbar-brand" routerLink="/revendas"
+          ><i class="bi bi-car-front"></i> Revendas</a
+        >
       </li>
     </ul>
-  </nav>
+  </div>
+</nav>
+
+<header class="navbar navbar-expand-lg navbar-dark container-header2">
+  <div class="container">
+    <h1 class="navbar-brand" routerLink="/home">Revendas Car</h1>
+    <button
+      class="navbar-toggler"
+      type="button"
+      data-bs-toggle="collapse"
+      data-bs-target="#navbarNav"
+      aria-controls="navbarNav"
+      aria-expanded="false"
+      aria-label="Toggle navigation"
+    >
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse collapse-link" id="navbarNav">
+      <ul class="navbar-nav">
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/home"
+            ><i class="bi bi-house"></i> Home</a
+          >
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/revendas"
+            ><i class="bi bi-car-front"></i> Revendas</a
+          >
+        </li>
+      </ul>
+    </div>
+  </div>
 </header>

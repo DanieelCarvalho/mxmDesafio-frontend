@@ -1,7 +1,8 @@
-import { HttpClient } from '@angular/common/http';
+import { HttpClient, HttpErrorResponse } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Car } from '../models/Cars';
-import { BehaviorSubject, Observable } from 'rxjs';
+import { BehaviorSubject, Observable, throwError } from 'rxjs';
+import { catchError } from 'rxjs/operators';
 
 @Injectable({
   providedIn: 'root',
@@ -13,7 +14,11 @@ export class CarsService {
   public listas = new BehaviorSubject<Car[]>([]);
 
   create(obj: Car): Observable<Car> {
-    return this.http.post(`${this.url}/create`, obj);
+    return this.http.post(`${this.url}/create`, obj).pipe(
+      catchError((error: HttpErrorResponse) => {
+        return throwError(error.error);
+      })
+    );
   }
 
   getCars(

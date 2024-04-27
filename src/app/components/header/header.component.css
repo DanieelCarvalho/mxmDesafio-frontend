@@ -1,10 +1,14 @@
-header {
-  border-bottom: 0.1rem solid;
-  box-shadow: 0px 2px 4px rgba(255, 255, 255, 0.5);
+.container-header {
+  /* border-bottom: 0.1rem solid;
+  box-shadow: 0px 2px 4px rgba(255, 255, 255, 0.5); */
   background-color: #000000;
 }
+.container-header2 {
+  display: none;
+}
 
-nav {
+.container-header {
+  background-color: #000000;
   color: #fff;
   display: flex;
   align-items: center;
@@ -13,14 +17,16 @@ nav {
   height: 9rem;
   padding-left: 1rem;
 }
-nav h1 {
+.container-header h1 {
   height: 100%;
   display: flex;
   align-items: center;
   font-weight: 400;
+  font-size: 3rem;
   color: #8a8a8a;
+  cursor: pointer;
 }
-a {
+.container-header a {
   text-decoration: none;
   color: #fff;
   position: relative;
@@ -28,7 +34,7 @@ a {
   transition: color 0.3s ease;
   color: #8a8a8a;
 }
-a::after {
+.container-header a::after {
   content: "";
   position: absolute;
   left: 0;
@@ -40,25 +46,49 @@ a::after {
   transform-origin: right;
   transition: transform 0.3s ease;
 }
-a:hover::after {
+.container-header a:hover::after {
   transform: scaleX(1);
   transform-origin: left;
 }
-ul {
+.container-header ul {
   list-style-type: none;
   display: flex;
   align-items: center;
   width: 30rem;
   height: 100%;
 }
-li {
+.container-header li {
   display: flex;
   justify-content: space-evenly;
   align-items: center;
   width: 20rem;
 }
-ul h1 {
+.container-header ul h1 {
   width: 30rem;
   display: flex;
   border: solid;
+}
+/* max-width: 480px */
+@media (max-width: 490px) {
+  .container-header {
+    display: none;
+  }
+  .container-header2 {
+    display: initial;
+    height: 9rem;
+  }
+  .container {
+    background-color: #000000;
+  }
+  .container h1 {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    font-weight: 400;
+    font-size: 2rem;
+    color: #8a8a8a;
+  }
+  .collapse-link {
+    text-align: center;
+  }
 }

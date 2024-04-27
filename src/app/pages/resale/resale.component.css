@@ -3,8 +3,8 @@ main {
   flex-direction: column;
   align-items: center;
   justify-content: space-evenly;
-
-  background-color: #000000;
+  background-color: #060606;
+  border: solid #060606;
 }
 label {
   color: #f5f5f5;
@@ -12,7 +12,8 @@ label {
 }
 
 .container-table {
-  width: 80%;
+  width: 80vw;
+  border: solid #060606;
 }
 .resale-header {
   width: 80%;
@@ -81,7 +82,9 @@ header h1 {
   font-weight: 400;
   color: #e0e0e0;
   text-transform: uppercase;
+  font-size: 1.2rem;
 }
+
 .btn-export:hover {
   color: #f5f5f5;
 }
@@ -90,7 +93,11 @@ header h1 {
   background-color: #2f4f4f;
   color: #e0e0e0;
   text-transform: uppercase;
+  font-size: 1.2rem;
+  border: none;
+  font-weight: 400;
 }
+
 .btn-adc-car {
   background-color: #2f4f4f;
   color: #e0e0e0;
@@ -111,12 +118,82 @@ header h1 {
   color: #e0e0e0;
   text-transform: uppercase;
 }
-.btn-voltar {
-  background-color: #6b3030;
-  border: none;
-
-  text-transform: uppercase;
+.btn-edit {
 }
+
 .btn-close-white {
   color: #fff;
+}
+.validacao {
+  color: red;
+}
+.mensagem-erro {
+  color: #d61f1f;
+  font-weight: 400;
+}
+
+@media (max-width: 991.98px) {
+  .resale-header {
+    width: 90vw;
+  }
+  .container-table {
+    width: 90vw;
+  }
+}
+@media (max-width: 767.98px) {
+  .resale-header {
+    width: 100vw;
+  }
+  .container-table {
+    width: 100vw;
+  }
+}
+@media (max-width: 575.98px) {
+  .resale-header {
+    width: 100vw;
+  }
+  .container-table {
+    width: 100vw;
+  }
+  .resale-header-buttons {
+    justify-content: space-between;
+
+    width: 60vw;
+  }
+  .btn-adc {
+    font-size: 1rem;
+  }
+  .btn-adc a {
+    font-size: 1rem;
+    width: 10rem;
+  }
+}
+/* max-width: 480px */
+@media (max-width: 480px) {
+}
+
+@media (max-width: 320px) {
+  .resale-header {
+  }
+  .resale-header h1 {
+    font-size: 2.5rem;
+  }
+  .btn-export {
+    font-size: 1rem;
+  }
+  .btn-export i {
+    font-size: 1rem;
+  }
+  .btn-adc {
+    font-size: 0.9rem;
+    width: 10rem;
+  }
+  .btn-adc i {
+    font-size: 0.9rem;
+  }
+  .container-table {
+  }
+  .resale-header-buttons {
+    width: 100vw;
+  }
 }

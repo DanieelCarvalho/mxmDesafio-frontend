@@ -23,6 +23,9 @@ section {
   align-items: center;
   justify-content: center;
 }
+.label-box label {
+  font-size: 1.4rem;
+}
 .custom-page-item a {
   height: 100%;
   font-size: 1.6rem;
@@ -66,8 +69,133 @@ a {
   background-color: #2f4f4f;
   border: none;
 }
+.btn-edit-modal {
+  background-color: #2f4f4f;
+  border: none;
+}
 
 .btn-delete {
   background-color: #6b3030;
   border: none;
+}
+.btn-delete-modal {
+  text-transform: uppercase;
+  background-color: #6b3030;
+  border: none;
+}
+.btn-voltar {
+  background-color: #6b3030;
+  border: none;
+  text-transform: uppercase;
+}
+.inputs {
+  display: flex;
+  flex-direction: column;
+}
+.inputs label {
+  font-weight: bold;
+  color: #8a8a8a;
+}
+.buttons {
+  display: flex;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  text-transform: uppercase;
+}
+.title-modal {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  text-transform: uppercase;
+  font-family: "Roboto Mono", monospace;
+  font-weight: 400;
+  color: #f5f5f5;
+}
+.title-modal {
+  font-size: 1.8rem !important;
+  font-weight: bold;
+}
+.form-control {
+  font-size: 1.6rem;
+}
+.form-control::placeholder {
+  font-size: 1.6rem;
+}
+
+/* max-width: 991.98px */
+@media (max-width: 991.98px) {
+  .search-box {
+    width: 20rem;
+  }
+  td {
+    font-size: 1.5rem;
+  }
+  th {
+    font-size: 1.5rem;
+  }
+  .btn-edit {
+  }
+  .btn-edit i {
+    font-size: 1.5rem;
+  }
+  .btn-delete {
+  }
+  .btn-delete i {
+    font-size: 1.5rem;
+  }
+}
+/* max-width: 767.98px */
+@media (max-width: 767.98px) {
+  .search-box {
+    width: 20rem;
+  }
+  td {
+    font-size: 1.4rem;
+  }
+  th {
+    font-size: 1.4rem;
+  }
+  .btn-edit {
+    font-size: 0;
+  }
+  .btn-edit i {
+    font-size: 1.4rem;
+  }
+  .btn-delete {
+    font-size: 0;
+  }
+  .btn-delete i {
+    font-size: 1.4rem;
+  }
+}
+
+/*max-width: 575.98px  */
+@media (max-width: 575.98px) {
+  .search-box {
+    width: 20rem;
+  }
+  td {
+    font-size: 1.1rem;
+  }
+  th {
+    font-size: 1.1rem;
+  }
+  .btn-edit {
+    font-size: 0;
+  }
+  .btn-edit i {
+  }
+  .btn-delete {
+    font-size: 0;
+  }
+  .btn-delete i {
+  }
+}
+@media (max-width: 320px) {
+  .label-box {
+  }
+  .search-box {
+    width: 16rem;
+  }
 }
