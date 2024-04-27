@@ -16,7 +16,7 @@ O Desafio MXM visa integrar um frontend Angular com um backend utilizando o Enti
 
 ## Features
 
-### Frontend
+
 
 ☑ Tela da Home: Apresenta uma visão geral da revendedora e suas principais informações.
 
