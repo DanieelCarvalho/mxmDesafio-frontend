@@ -1,27 +1,66 @@
-# RevendaDeCarros
+# Desafio MXM - Revendedora de Carros
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 17.0.5.
+Projeto de uma Revendedora de carros em aplicação web utilizando Angular
 
-## Development server
+## Sumário
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+- [Descrição](#descrição)
+- [Features](#features)
+- [Tecnologias usadas](#tecnologias-usadas)
+- [Autor](#autor)
+<!-- - [Deploy](#deploy) -->
 
-## Code scaffolding
+## Descrição
+O Desafio MXM visa integrar um frontend Angular com um backend utilizando o Entity Framework. Optou-se por criar uma aplicação web voltada para uma revendedora de carros. Seu objetivo principal é fornecer uma plataforma intuitiva e eficiente para gerenciar anúncios de veículos, proporcionando uma experiência agradável tanto para os administradores quanto para os usuários finais.
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
 
-## Build
+## Features
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+### Frontend
 
-## Running unit tests
+☑ Tela da Home: Apresenta uma visão geral da revendedora e suas principais informações.
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+☑ Tela de cadastro de anuncio de carros
 
-## Running end-to-end tests
+☑ Listagem de Carros: Exibe todos os carros cadastrados, oferecendo uma visualização clara e organizada.
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+☑ Formulário de Adição: Modal interativo para inserir detalhes de um novo carro de forma fácil e rápida.
 
-## Further help
+☑ Edição de Anúncios: Modal que possibilita a edição dos detalhes de um anúncio existente.
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+☑ Exclusão de Anúncios: Modal de confirmação para excluir um anúncio específico da base de dados.
+
+☑ Exportação para Excel: Adição de um botão para baixar os dados do banco de dados no formato Excel (XLS), facilitando a análise e o compartilhamento dos dados.
+
+
+## Tecnologias usadas
+
+### Frontend
+
+- HTML
+- CSS
+- Bootstrap
+- TypeScript
+- Angular
+
+
+
+## Autor
+
+
+
+<div align=""><img src="https://avatars.githubusercontent.com/u/104596788?v=4" width="200px;" alt=""/></div>
+
+<div align=""><a href="https://github.com/DanieelCarvalho](https://www.linkedin.com/in/daniel-carvalho-dev/">Daniel Carvalho</a></div>
+
+
+
+
+
+
+
+<!-- ## Deploy
+
+O deploy do projeto foi feito no serviço Vercel.
+
+🚀 Deploy: https://pac-pay.vercel.app/inicio -->
