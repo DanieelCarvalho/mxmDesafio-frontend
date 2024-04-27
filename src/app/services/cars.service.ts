@@ -8,7 +8,8 @@ import { catchError } from 'rxjs/operators';
   providedIn: 'root',
 })
 export class CarsService {
-  private url: string = 'https://localhost:7125/Revendas';
+  // private url: string = 'https://localhost:7125/Revendas';
+  private url: string = 'https://backend-deploy-car.azurewebsites.net/';
   constructor(private http: HttpClient) {}
 
   public listas = new BehaviorSubject<Car[]>([]);
