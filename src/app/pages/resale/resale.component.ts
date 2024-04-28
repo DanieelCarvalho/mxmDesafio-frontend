@@ -80,7 +80,8 @@ export class ResaleComponent {
       (r) => {
         this.tableComponent.etapa = 0;
         this.tableComponent.table();
-        this.form.reset();
+        this.errors = null;
+        this.form.reset({ portas: '' });
       },
       (error) => {
         if (error) {
