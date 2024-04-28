@@ -97,7 +97,11 @@ header h1 {
   border: none;
   font-weight: 400;
 }
-
+.btn-voltar {
+  background-color: #6b3030;
+  border: none;
+  text-transform: uppercase;
+}
 .btn-adc-car {
   background-color: #2f4f4f;
   color: #e0e0e0;
@@ -156,12 +160,16 @@ header h1 {
     width: 100vw;
   }
   .resale-header-buttons {
-    justify-content: space-between;
+    justify-content: space-evenly;
 
-    width: 60vw;
+    width: 40vw;
   }
+
   .btn-adc {
-    font-size: 1rem;
+    font-size: 0;
+  }
+  .btn-export {
+    font-size: 0;
   }
   .btn-adc a {
     font-size: 1rem;
@@ -179,21 +187,16 @@ header h1 {
     font-size: 2.5rem;
   }
   .btn-export {
-    font-size: 1rem;
   }
   .btn-export i {
-    font-size: 1rem;
-  }
-  .btn-adc {
-    font-size: 0.9rem;
-    width: 10rem;
-  }
-  .btn-adc i {
-    font-size: 0.9rem;
-  }
-  .container-table {
-  }
-  .resale-header-buttons {
-    width: 100vw;
+    .btn-adc {
+    }
+    .btn-adc i {
+    }
+    .container-table {
+    }
+    .resale-header-buttons {
+      width: 100vw;
+    }
   }
 }

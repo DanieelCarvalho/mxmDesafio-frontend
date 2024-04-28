@@ -4,7 +4,7 @@
       >Mostrar
       <select
         name="numero"
-        class="form-select-md"
+        class="form-select-md select-size-page"
         (change)="pageSize(size)"
         [(ngModel)]="size"
       >
@@ -52,14 +52,14 @@
     <tbody>
       <tr *ngFor="let v of dados">
         <td class="text-center">{{ v.modelo || "" }}</td>
-        <td>R${{ v.preco?.toFixed(2) }}</td>
+        <td class="text-center">R${{ v.preco?.toFixed(2) }}</td>
         <td class="text-center">{{ v.ano }}</td>
         <td class="text-center">{{ v.portas }}</td>
         <td class="text-center">
-          {{ v.criadoEm | date : "dd/MM/yyyy  hh:mm" }}
+          {{ v.criadoEm | date : "dd/MM/yyyy" }}
         </td>
         <td class="text-center">
-          {{ v.atualizadoEm | date : "dd/MM/yyyy  hh:mm" }}
+          {{ v.atualizadoEm | date : "dd/MM/yyyy" }}
         </td>
         <td>
           <button
@@ -91,7 +91,7 @@
 <div class="container-pagination">
   <ul class="pagination">
     <li class="page-item" (click)="etapaAnterior()">
-      <a class="page-link" aria-label="Previous">
+      <a class="page-link" aria-label="Previous" text-dark>
         <span aria-hidden="true">&laquo;</span>
       </a>
     </li>
@@ -146,28 +146,26 @@
                 required
               />
             </label>
-            <label>
-              Ano:
+            <label class="form-group">
+              <label for="anoInput">Qual o ano do carro?</label>
               <input
                 type="text"
                 class="form-control"
-                placeholder="Qual o ano do carro?"
+                placeholder="Informe um ano entre 1950 e 2025"
+                maxlength="4"
                 formControlName="ano"
-                name="ano"
-                required
               />
             </label>
-            <label>
-              Portas
-              <input
-                type="text"
-                class="form-control"
-                placeholder="Quantas portas tem o carro?"
-                formControlName="portas"
-                name="portas"
-                required
-              />
-            </label>
+            <div class="form-group">
+              <label for="exampleCombobox">Selecione:</label>
+              <select class="form-control" formControlName="portas">
+                <option value="" disabled selected hidden>
+                  Quantas portas tem o carro?
+                </option>
+                <option value="2">2 Portas</option>
+                <option value="4">4 Portas</option>
+              </select>
+            </div>
           </div>
           <div class="buttons">
             <button
@@ -203,12 +201,6 @@
     <div class="modal-content bg-dark">
       <div class="modal-header">
         <h1 class="modal-title fs-5 title-modal">Excluir Carro</h1>
-        <button
-          type="button"
-          class="btn-close btn-close-white"
-          data-bs-dismiss="modal"
-          aria-label="Close"
-        ></button>
       </div>
 
       <div class="modal-header">
@@ -272,6 +264,13 @@
               data-bs-dismiss="modal"
             >
               excluir
+            </button>
+            <button
+              type="button"
+              class="btn btn-primary btn-lg btn-voltar-delete"
+              data-bs-dismiss="modal"
+            >
+              Fechar
             </button>
           </div>
         </form>

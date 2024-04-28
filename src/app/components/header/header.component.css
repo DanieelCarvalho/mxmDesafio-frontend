@@ -33,6 +33,7 @@
   display: inline-block;
   transition: color 0.3s ease;
   color: #8a8a8a;
+  font-size: 1.6rem;
 }
 .container-header a::after {
   content: "";
@@ -68,8 +69,8 @@
   display: flex;
   border: solid;
 }
-/* max-width: 480px */
-@media (max-width: 490px) {
+/* max-width: 500px */
+@media (max-width: 575.98px) {
   .container-header {
     display: none;
   }

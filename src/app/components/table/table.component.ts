@@ -37,10 +37,20 @@ export class TableComponent {
   formEdit = new FormGroup({
     modelo: new FormControl('', Validators.required),
     preco: new FormControl('', Validators.required),
-    ano: new FormControl('', [Validators.required]),
+    ano: new FormControl('', [
+      Validators.required,
+      Validators.pattern('[0-9]*'),
+      this.anoValidator,
+    ]),
     portas: new FormControl('', Validators.required),
   });
-
+  anoValidator(control: FormControl): { [key: string]: boolean } | null {
+    const value = control.value;
+    if (value && (isNaN(value) || value < 1950 || value > 2025)) {
+      return { anoInvalido: true };
+    }
+    return null;
+  }
   table(): void {
     this.servicoDados
       .getCars(this.etapa, this.size, this.modelSearch, this.sort)

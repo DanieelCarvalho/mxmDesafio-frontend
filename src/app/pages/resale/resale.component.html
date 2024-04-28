@@ -5,7 +5,7 @@
     <h1>Anúncios</h1>
     <div class="resale-header-buttons">
       <button type="button" class="btn btn-lg btn-export" (click)="export()">
-        <i class="bi bi-file-earmark-plus"> </i> Exportar
+        <i class="bi bi-file-earmark-arrow-down"></i> Exportar
       </button>
       <button
         type="button"
@@ -50,7 +50,7 @@
                   role="alert"
                   *ngIf="errors && errors.errors && errors.errors['Modelo']"
                 >
-                  informe um modelo de carro.
+                  informe um modelo de carro válido.
                 </p>
               </label>
               <label>
@@ -75,52 +75,34 @@
                   role="alert"
                   *ngIf="errors && errors.errors && errors.errors['Preco']"
                 >
-                  O valor tem que ser maior que 0.
-                </p>
-              </label>
-              <label>
-                Ano:
-                <input
-                  type="text"
-                  class="form-control"
-                  placeholder="Qual o ano do carro?"
-                  formControlName="ano"
-                  name="ano"
-                  required
-                />
-                <p
-                  class="mensagem-erro"
-                  role="alert"
-                  *ngIf="errors && errors.errors && errors.errors['$.ano']"
-                >
-                  informe uma data válida.
-                </p>
-                <p
-                  class="mensagem-erro"
-                  role="alert"
-                  *ngIf="errors && errors.errors && errors.errors['Ano']"
-                >
-                  informe um ano entre 1950 e 2025
-                </p>
-              </label>
-              <label>
-                Portas
-                <input
-                  type="text"
-                  class="form-control"
-                  placeholder="Quantas portas tem o carro?"
-                  formControlName="portas"
-                  name="portas"
-                  required
-                />
-                <p
-                  class="mensagem-erro"
-                  role="alert"
-                  *ngIf="errors && errors.errors && errors.errors['Portas']"
-                >
                   informe um valor válido.
                 </p>
               </label>
+              <label class="form-group">
+                <label for="anoInput">Qual o ano do carro?</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  placeholder="Informe um ano entre 1950 e 2025"
+                  maxlength="4"
+                  formControlName="ano"
+                />
+              </label>
+
+              <div class="form-group">
+                <label for="exampleCombobox">Selecione:</label>
+                <select
+                  class="form-control"
+                  id="exampleCombobox"
+                  formControlName="portas"
+                >
+                  <option value="" disabled selected hidden>
+                    Quantas portas tem o carro?
+                  </option>
+                  <option value="2">2 Portas</option>
+                  <option value="4">4 Portas</option>
+                </select>
+              </div>
             </div>
           </form>
           <div class="buttons">

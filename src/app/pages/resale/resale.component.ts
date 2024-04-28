@@ -44,7 +44,11 @@ export class ResaleComponent {
   form = new FormGroup({
     modelo: new FormControl('', Validators.required),
     preco: new FormControl('', Validators.required),
-    ano: new FormControl('', [Validators.required]),
+    ano: new FormControl('', [
+      Validators.required,
+      Validators.pattern('[0-9]*'),
+      this.anoValidator,
+    ]),
     portas: new FormControl('', Validators.required),
   });
 
@@ -53,8 +57,14 @@ export class ResaleComponent {
   errorPrice: boolean = false;
   errorAge: boolean = false;
 
+  anoValidator(control: FormControl): { [key: string]: boolean } | null {
+    const value = control.value;
+    if (value && (isNaN(value) || value < 1950 || value > 2025)) {
+      return { anoInvalido: true };
+    }
+    return null;
+  }
   updateAndRefreshTable(): void {
-    // Aqui você pode chamar a função table() do componente filho
     this.tableComponent.table();
   }
 
