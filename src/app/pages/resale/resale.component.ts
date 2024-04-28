@@ -104,12 +104,12 @@ export class ResaleComponent {
     );
   }
 
-  private downloadBlob(blob: Blob): void {
+  downloadBlob(blob: Blob): void {
     const url = window.URL.createObjectURL(blob);
     const a = document.createElement('a');
     document.body.appendChild(a);
     a.href = url;
-    a.download = 'arquivo_exportado.csv';
+    a.download = 'RevendaCarros.xls';
     a.click();
     window.URL.revokeObjectURL(url);
     document.body.removeChild(a);

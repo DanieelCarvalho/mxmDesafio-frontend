@@ -1,9 +1,8 @@
 .content {
-  height: 50vh;
+  height: 100vh;
   display: flex;
-  padding-left: 2vw;
   position: relative;
-  background-color: black;
+  background-color: #060606;
   flex-direction: column;
 }
 
@@ -105,5 +104,13 @@
 @media (max-width: 320px) {
   .content-title {
     font-size: 5.5vw;
+  }
+}
+@media (min-width: 1200px) {
+  .content {
+    height: 80vh;
+  }
+  .content-figure {
+    height: 100%;
   }
 }
